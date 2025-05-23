@@ -16,3 +16,6 @@ Thumbs.db
 # Ignore database credentials
 *.db
 *.sqlite3
+
+#Ignore CSV files
+*.csv
