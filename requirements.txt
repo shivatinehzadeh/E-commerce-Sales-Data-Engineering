@@ -1,0 +1,7 @@
+fastapi
+kagglehub
+pandas
+sqlalchemy
+requests
+psycopg2
+uvicorn
