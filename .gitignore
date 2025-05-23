@@ -18,4 +18,4 @@ Thumbs.db
 *.sqlite3
 
 #Ignore CSV files
-*.csv
+data/*.csv
