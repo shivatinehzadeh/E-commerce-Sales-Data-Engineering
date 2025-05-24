@@ -2,6 +2,7 @@ import os
 import kagglehub
 import shutil
 from dotenv import load_dotenv
+from data_cleaner import data_cleaner
 load_dotenv()
 
 
@@ -21,3 +22,5 @@ def gathering_datasets():
         shutil.copy(path_customers+(os.getenv("customers_name")), "data/customers.csv")
     else:
         print("Customers dataset already exists.")
+    data_cleaner()
+    print("Datasets gathered and cleaned successfully.")
