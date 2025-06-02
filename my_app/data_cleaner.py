@@ -1,5 +1,19 @@
 import pandas as pd
 import numpy as np
+import sys
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))
+
+# Adjust this path to the folder containing your `my_app` folder
+base_dir = os.getenv("BASE_PATH")
+
+if base_dir and base_dir not in sys.path:
+    sys.path.insert(0, base_dir)
+print(f"Base directory added to sys.path: {base_dir}")    
+
 
 def data_cleaner():
     # Load datasets

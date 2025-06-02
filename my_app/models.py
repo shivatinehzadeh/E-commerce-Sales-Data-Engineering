@@ -2,6 +2,12 @@ from sqlalchemy import  Column, String, Integer, DateTime,BigInteger, Float, Boo
 from sqlalchemy.ext.declarative import declarative_base
 from db_session import engine
 from pydantic import BaseModel
+import sys
+import os
+
+# Adjust this path to the folder containing your `my_app` folder
+base_dir =os.getenv('BASE_PATH')
+
 
 Base = orm.declarative_base()
 

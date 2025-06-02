@@ -2,11 +2,15 @@ import os
 import kagglehub
 import shutil
 from dotenv import load_dotenv
-from data_cleaner import data_cleaner
+import sys
+import os
+
+from my_app.data_cleaner import data_cleaner
 load_dotenv()
 
 
 def gathering_datasets():
+    print("Gathering datasets...")
     if not os.path.exists("data/orders.csv"):
         path_orders = kagglehub.dataset_download(os.getenv("path_orders"))
         shutil.copy(path_orders+(os.getenv("orders_name")), "data/orders.csv")

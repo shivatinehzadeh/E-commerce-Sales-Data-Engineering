@@ -1,5 +1,6 @@
 # Ignore Python virtual environment
 venv/
+airflow_venv/
 .env/
 .env
 # Ignore compiled Python files
